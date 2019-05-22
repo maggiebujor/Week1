@@ -5,7 +5,7 @@ import {render} from 'react-dom'
 import Map from './Map.js'
 
 
-
+const API_KEY = process.env.REACT_APP_API_KEY
 export default class RestList extends React.Component {
   state = {
 
@@ -16,7 +16,7 @@ export default class RestList extends React.Component {
 
 
   componentDidMount() {
-    axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=38.0293,-78.4767&radius=5000&types=restaurant&key=AIzaSyBQRbOl8Z5HnrY12zURP84C6Tdwsoy-HUI").then(
+    axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=38.0293,-78.4767&radius=5000&types=restaurant&key="+API_KEY).then(
         res => {
 
     let arr = [];

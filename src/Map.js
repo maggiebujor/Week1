@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+
 
 
 export default class Map extends React.Component {
